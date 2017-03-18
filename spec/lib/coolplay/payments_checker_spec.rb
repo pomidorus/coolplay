@@ -1,8 +1,8 @@
 require './spec/spec_helper'
 
 RSpec.describe  Coolplay::PaymentsChecker do
-  let(:mommy) { Coolplay::Recipient.new(name: 'Mommy Pig') }
-  let(:daddy) { Coolplay::Recipient.new(name: 'Daddy Pig') }
+  let(:mommy) { Coolplay::Recipient.new(id: '', name: 'Mommy Pig') }
+  let(:daddy) { Coolplay::Recipient.new(id: '', name: 'Daddy Pig') }
   let(:payment_1) { Coolplay::Payment.new(id: '', amount: 20.3, currency: 'GBP', recipient: @recipient_1) }
   let(:payment_2) { Coolplay::Payment.new(id: '', amount: 10.1, currency: 'GBP', recipient: @recipient_2) }
 

@@ -4,8 +4,8 @@ require_relative 'lib/coolplay'
 auth = Coolplay::Authentication.new(ENV['USERNAME'], ENV['KEY'])
 auth.call
 
-mommy = Coolplay::Recipient.new(name: 'Mommy Pig')
-daddy = Coolplay::Recipient.new(name: 'Daddy Pig')
+mommy = Coolplay::Recipient.new(id: '', name: 'Mommy Pig')
+daddy = Coolplay::Recipient.new(id: '', name: 'Daddy Pig')
 
 recipients_creator = Coolplay::RecipientsCreator.new(auth.token)
 recipients_creator.call([mommy, daddy])

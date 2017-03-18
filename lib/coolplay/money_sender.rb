@@ -2,7 +2,7 @@ module Coolplay
   class MoneySender
     include HTTParty
 
-    attr_reader :payments
+    attr_reader :payments, :status
 
     def initialize(token)
       @token = token
@@ -34,6 +34,7 @@ module Coolplay
       }
 
       response = self.class.post(CREATE_PAYMENT_URL, body: body, headers: headers)
+      @status = response.code
       return if response.code != 201
 
       puts '...Ok'
