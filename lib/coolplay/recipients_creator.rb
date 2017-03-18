@@ -10,8 +10,6 @@ module Coolplay
     end
 
     def call(recipients)
-      puts "Trying to add #{recipients.count} recipients..."
-
       recipients.each do |recipient|
         result = add_recipient(recipient)
         next if result.nil?
@@ -44,6 +42,7 @@ module Coolplay
       response = self.class.post(CREATE_RECIPIENTS_URL, body: body, headers: headers)
       return if response.code != 201
 
+      puts '...Ok'
       response['recipient']
     end
 
