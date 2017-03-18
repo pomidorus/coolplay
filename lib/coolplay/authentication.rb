@@ -3,5 +3,9 @@ module Coolplay
     def call
       puts 'Call authentication'
     end
+
+    def token
+      puts 'Retrieve token'
+    end
   end
 end
