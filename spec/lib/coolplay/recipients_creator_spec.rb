@@ -14,7 +14,8 @@ RSpec.describe  Coolplay::RecipientsCreator do
     let(:instance) { Coolplay::RecipientsCreator.new(@token) }
 
     it 'creates recipients in the cloud' do
-      recipients = instance.call([mommy, daddy])
+      instance.call([mommy, daddy])
+      recipients = instance.recipients
       expect(recipients[0].id).not_to eq('')
       expect(recipients[1].id).not_to eq('')
     end

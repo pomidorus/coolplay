@@ -2,12 +2,14 @@ module Coolplay
   class RecipientsCreator
     include HTTParty
 
+    attr_reader :recipients
+
     def initialize(token)
       @token = token
+      @recipients = []
     end
 
     def call(recipients)
-      results = []
       puts "Trying to add #{recipients.count} recipients..."
 
       recipients.each do |recipient|
@@ -15,10 +17,8 @@ module Coolplay
         next if result.nil?
 
         recipient.id = result['id']
-        results << recipient
+        @recipients << recipient
       end
-
-      results
     end
 
     private
