@@ -1,1 +1,5 @@
+require_relative 'lib/coolplay'
+
 puts 'Trying to authenticate to Coolplay API...'
+
+Coolplay::Authentication.new().call
