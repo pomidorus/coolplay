@@ -3,6 +3,7 @@ require 'httparty'
 require_relative 'coolplay/authentication'
 require_relative 'coolplay/recipients_creator'
 require_relative 'coolplay/money_sender'
+require_relative 'coolplay/payments_checker'
 require_relative 'coolplay/models/recipient'
 require_relative 'coolplay/models/payment'
 
@@ -12,4 +13,5 @@ module Coolplay
   SEARCH_RECIPIENTS_URL = PRODUCTION_URL + '/recipients'
   CREATE_RECIPIENTS_URL = PRODUCTION_URL + '/recipients'
   CREATE_PAYMENT_URL = PRODUCTION_URL + '/payments'
+  ALL_PAYMENTS_URL = PRODUCTION_URL + '/payments'
 end

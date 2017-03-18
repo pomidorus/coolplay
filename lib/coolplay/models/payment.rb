@@ -3,8 +3,8 @@ module Coolplay
     attr_reader :amount, :recipient_id, :currency
     attr_accessor :id, :status
 
-    def initialize(amount:, currency:, recipient:)
-      @id = ''
+    def initialize(id:, amount:, currency:, recipient:)
+      @id = id
       @status = ''
       @amount = amount
       @currency = currency

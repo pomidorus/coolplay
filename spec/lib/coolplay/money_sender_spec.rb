@@ -17,10 +17,10 @@ RSpec.describe  Coolplay::MoneySender do
 
   describe '#call' do
     let(:instance) { Coolplay::MoneySender.new(@token) }
-    let(:payment_1) { Coolplay::Payment.new(amount: 20.3, currency: 'GBP', recipient: @recipient_1) }
-    let(:payment_2) { Coolplay::Payment.new(amount: 10.1, currency: 'GBP', recipient: @recipient_2) }
+    let(:payment_1) { Coolplay::Payment.new(id: '', amount: 20.3, currency: 'GBP', recipient: @recipient_1) }
+    let(:payment_2) { Coolplay::Payment.new(id: '', amount: 10.1, currency: 'GBP', recipient: @recipient_2) }
 
-    it 'ff' do
+    it 'sends payments for processing' do
       instance.call([payment_1, payment_2])
       payments = instance.payments
 
