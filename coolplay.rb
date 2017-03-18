@@ -8,4 +8,6 @@ puts auth.token
 mommy = Coolplay::Recipient.new(name: 'Mommy Pig')
 daddy = Coolplay::Recipient.new(name: 'Daddy Pig')
 
-RecipientsCreator.new(auth).call([mommy, daddy])
+recipients = Coolplay::RecipientsCreator.new(auth.token).call([mommy, daddy])
+
+

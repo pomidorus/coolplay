@@ -1,9 +1,9 @@
 module Coolplay
   class Recipient
-    attr_reader :name
-    attr_writer :name
+    attr_accessor :name, :id
 
     def initialize(name:)
+      @id = ''
       @name = name
     end
   end
