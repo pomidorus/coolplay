@@ -1,4 +1,4 @@
-require_relative '../lib/coolplay/authentication'
+require_relative '../lib/coolplay'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
